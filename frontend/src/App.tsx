@@ -1,13 +1,16 @@
+// src/App.tsx
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NotFound from './pages/NotFound';
 
 const App: React.FC = () => {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-500">
-        tailwind test
-      </h1>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
