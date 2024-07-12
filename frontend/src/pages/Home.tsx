@@ -1,9 +1,11 @@
 import React from 'react';
+import Footer from '../components/Footer'
 
 const Home: React.FC = () => {
     return (
         <div>
-            Accueil
+            Home
+            <Footer />
         </div>
     );
 };

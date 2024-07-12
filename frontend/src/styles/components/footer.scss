@@ -1,0 +1,17 @@
+/* Styles pour le Footer */
+
+/* Style par défaut pour l'icône */
+.footer-icon {
+    width: 200px;
+    height: 200px;
+    filter: grayscale(100%); /* Rendre l'image grise */
+    transition: filter 0.3s ease; /* Animation de transition */
+  }
+  
+  /* Styles au survol de l'icône */
+  .footer-icon:hover {
+    filter: none; /* Supprimer le filtre gris pour récupérer les couleurs originales */
+    transform: scale(1.2);
+    transition: 1s ease;
+  }
+  
