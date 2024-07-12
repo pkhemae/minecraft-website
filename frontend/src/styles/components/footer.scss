@@ -1,17 +1,23 @@
-/* Styles pour le Footer */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* Style par défaut pour l'icône */
+.text-gradient {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(to right, #f39c12, #8e44ad);
+}
+
 .footer-icon {
     width: 200px;
     height: 200px;
-    filter: grayscale(100%); /* Rendre l'image grise */
-    transition: filter 0.3s ease; /* Animation de transition */
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
   }
   
-  /* Styles au survol de l'icône */
   .footer-icon:hover {
-    filter: none; /* Supprimer le filtre gris pour récupérer les couleurs originales */
+    filter: none;
     transform: scale(1.2);
     transition: 1s ease;
   }
+  
   
