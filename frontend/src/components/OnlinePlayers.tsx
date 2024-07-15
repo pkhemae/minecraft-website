@@ -24,20 +24,20 @@ const OnlinePlayers: React.FC = () => {
     };
 
     fetchServerStatus();
-  }, []);
+  }, [serverAddress]);
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <span>Error: {error}</span>;
   }
 
   return (
-    <div>
+    <span>
       {onlinePlayers !== null ? (
-        <p>{onlinePlayers}</p>
+        <span>{onlinePlayers}</span>
       ) : (
-        <p>0</p>
+        <span>0</span>
       )}
-    </div>
+    </span>
   );
 };
 
