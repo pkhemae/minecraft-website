@@ -1,32 +1,22 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { useNavigate } from 'react-router-dom';
+import Footer from '../components/Footer';
 
 const NotFound: React.FC = () => {
     const websiteName = import.meta.env.VITE_WEBSITE_NAME;
-    const navigate = useNavigate();
-
-    const handleHomeClick = () => {
-        navigate('/');
-    };
 
     return (
         <div>
             <Helmet>
-                <title>{websiteName} | Erreur</title>
+                <title>{websiteName} | 404</title>
             </Helmet>
-            <div className="flex items-center justify-center min-h-screen bg-gray-100">
-                <div className="text-center bg-white p-8 rounded-lg shadow-md">
-                    <h1 className="text-6xl font-bold text-gray-800">404</h1>
-                    <h2 className="text-2xl font-semibold text-gray-700 mt-4">Page non trouvée</h2>
-                    <p className="text-gray-600 mt-2 mb-6">La page que vous cherchez n'a pas pu être trouvée.</p>
-                    <button
-                        onClick={handleHomeClick}
-                        className="bg-yellow-400 hover:bg-yellow-500 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300"
-                    >
-                        Accueil
-                    </button>
-                </div>
+            <div>
+      <div>
+        <div className="bottom-0 mt-[100px] ml-[-50%] h-[500px] w-[200%] rounded-t-[100%] bg-gray-300">
+            <div className="mt-5 text-center text-2xl text-white">...</div>
+        </div>
+      </div>
+            <Footer />
             </div>
         </div>
     );
