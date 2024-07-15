@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 const OnlinePlayers: React.FC = () => {
   const [onlinePlayers, setOnlinePlayers] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const serverAddress = 'play.hypixel.net';
+  const serverAddress = import.meta.env.VITE_SERVER_IP;  
 
   useEffect(() => {
     const fetchServerStatus = async () => {
@@ -35,7 +35,7 @@ const OnlinePlayers: React.FC = () => {
       {onlinePlayers !== null ? (
         <p>{onlinePlayers}</p>
       ) : (
-        <p>Loading...</p>
+        <p>0</p>
       )}
     </div>
   );
