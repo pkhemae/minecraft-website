@@ -1,7 +1,8 @@
-.nav-top {
+.nav-top,
+.nav-bottom {
     border-bottom: 1px solid gray;
 }
 
-.nav-bottom {
-    border-bottom: 1px solid gray;
+.active {
+    color: $goldColor;
 }
