@@ -19,9 +19,9 @@ const Footer: React.FC = () => {
 
   return (
     <footer>
-      <div className="relative py-14 text-center bg-yellow-500 bg-opacity-90 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-cover before:bg-center before:opacity-40 before:bg-[url('https://www.baltana.com/files/wallpapers-28/Minecraft-Dungeons-Background-Wallpaper-85208.jpg')]">
+      <div className="relative py-14 text-center bg-yellow-500 bg-opacity-90 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-cover before:bg-center before:opacity-40 before:bg-[url('https://images7.alphacoders.com/110/1100122.jpg')]">
         <p className="relative text-white text-xl font-bold">
-          Rejoignez les <span className="inline"><OnlinePlayers /></span> joueurs connectés sur <span className="hover:cursor-pointer lowercase bg-yellow-500 py-1 px-3 rounded" onClick={handleCopyToClipboard}>
+          Rejoignez les <span className="inline"><OnlinePlayers /></span> joueurs connectés sur <span className="hover:cursor-pointer hover:border-gray-300 lowercase bg-yellow-500 py-1 px-3 rounded border-b-2" onClick={handleCopyToClipboard}>
             {copied ? 'Adresse copiée' : serverIP}
           </span> !
         </p>
