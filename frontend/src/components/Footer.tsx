@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
             Copyright © 2023 {websiteName} - Tous droits réservés |{' '}
             <a href="#" className="hover:underline text-yellow-300"> CGU</a>{' '} |{' '}
             <a href="#" className="hover:underline text-yellow-300"> CGV</a>{' '}| Propulsé par{' '}
-            <a href="https://azuriom.com" className="hover:underline text-yellow-300"> {websiteName}</a>.
+            <a className="hover:underline text-yellow-300"> {websiteName}</a>.
           </span>
         </div>
       </div>

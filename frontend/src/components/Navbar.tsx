@@ -21,7 +21,7 @@ const Navbar = () => {
           </div>
           <div className="flex items-center md:mr-40">
             {user ? (
-              <a href="#" onClick={logout} className="flex items-center space-x-2">
+              <a href="" onClick={logout} className="flex items-center space-x-2">
                 <i className="bi bi-box-arrow-right"></i>
                 <span className="font-extrabold">Déconnexion</span>
               </a>
