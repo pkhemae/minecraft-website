@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';  // Importez useNavigate
+import { useNavigate } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import Footer from '../components/Footer';
 import { Helmet } from 'react-helmet';
@@ -9,12 +9,9 @@ import { useAuth } from '../context/AuthContext';
 const Authentication: React.FC = () => {
   const websiteName = import.meta.env.VITE_WEBSITE_NAME;
   const { user } = useAuth();
-  const navigate = useNavigate();  // Utilisez useNavigate
-
-  // Vérifiez si l'utilisateur est connecté
+  const navigate = useNavigate();
   useEffect(() => {
     if (user) {
-      // Redirigez vers la page d'accueil si l'utilisateur est connecté
       navigate('/');
     }
   }, [user, navigate]);
