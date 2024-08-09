@@ -1,10 +1,6 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-
-interface AuthContextType {
-  user: string | null;
-  login: (user: string) => void;
-  logout: () => void;
-}
+// src/Auth.tsx
+import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { AuthContextType } from '../types';
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Footer from '../components/Footer';
 
 const NotFound: React.FC = () => {
     const websiteName = import.meta.env.VITE_WEBSITE_NAME;
@@ -11,8 +10,7 @@ const NotFound: React.FC = () => {
                 <title>{websiteName} | 404</title>
             </Helmet>
             <div>
-                <h1>404 - Page not found</h1>
-            <Footer />
+                <p>404</p>
             </div>
         </div>
     );

@@ -7,8 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        prussianblue: '#13293d',
-        lapislazuli: '#006494',
+        prussianblue: '#0c1529',
+        lapislazuli: '#070f22',
+        skyblue: '#5b68e0',
+        secondarysky: '#3b8fbd',
       },
     },
   },

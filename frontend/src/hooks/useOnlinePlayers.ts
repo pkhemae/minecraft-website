@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
-const OnlinePlayers: React.FC = () => {
+const useOnlinePlayers = (serverAddress: string) => {
   const [onlinePlayers, setOnlinePlayers] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
-  const serverAddress = import.meta.env.VITE_SERVER_IP;  
 
   useEffect(() => {
     const fetchServerStatus = async () => {
@@ -26,19 +25,7 @@ const OnlinePlayers: React.FC = () => {
     fetchServerStatus();
   }, [serverAddress]);
 
-  if (error) {
-    return <span>Error: {error}</span>;
-  }
-
-  return (
-    <span>
-      {onlinePlayers !== null ? (
-        <span>{onlinePlayers}</span>
-      ) : (
-        <span>0</span>
-      )}
-    </span>
-  );
+  return { onlinePlayers, error };
 };
 
-export default OnlinePlayers;
+export default useOnlinePlayers;
